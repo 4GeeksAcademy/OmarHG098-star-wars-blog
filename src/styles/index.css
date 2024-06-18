@@ -1,3 +1,13 @@
 /* 
     General Styles
 */
+.custom-card{
+    min-width: 300px;
+}
+
+.element-containers{
+    width: 95%;
+    margin: 0 auto;
+    overflow-x: scroll;
+
+}

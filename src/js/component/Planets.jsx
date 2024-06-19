@@ -9,7 +9,7 @@ const Planets = () => {
     <div className="d-flex element-containers gap-3">
       {store.planets.map((planet, idx) => {
         return (
-            <div className="card custom-card" key={planet + idx}>
+            <div className="card custom-card my-2" key={planet + idx}>
               <img className="card-img-top" src="..." alt="Card image cap" />
               <div className="card-body">
                 <h5 className="card-title">{planet.name}</h5>

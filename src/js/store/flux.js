@@ -3,8 +3,11 @@ const getState = ({ getStore, getActions, setStore }) => {
     store: {
       apiURL: "https://swapi.dev/api",
       people: [],
+	  person: {},
       planets: [],
-	  vehicles: [], 
+	  planet: {},
+	  vehicles: [],
+	  vehicle: {}, 
     },
     actions: {
       getPeople: async () => {
@@ -23,6 +26,24 @@ const getState = ({ getStore, getActions, setStore }) => {
           console.log(error);
         }
       },
+
+	  getPerson: async (id) => {
+        const store = getStore();
+        try {
+          const response = await fetch(`${store.apiURL}/people/${id}`);
+          if (!response.ok) {
+            throw new Error("No se pudo obtener el personaje");
+          }
+		  const data = await response.json();
+		  console.log(data);
+		  setStore({
+			person: data,
+		  })
+        } catch (error) {
+          console.log(error);
+        }
+      }, 
+	  
       getPlanets: async () => {
 		const store = getStore();
 		try {
@@ -40,6 +61,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 		}
 	  },
 
+	  getPlanet: async (id) => {
+        const store = getStore();
+        try {
+          const response = await fetch(`${store.apiURL}/planets/${id}`);
+          if (!response.ok) {
+            throw new Error("No se pudo obtener el planeta");
+          }
+		  const data = await response.json();
+		  console.log(data);
+		  setStore({
+			planet: data,
+		  })
+        } catch (error) {
+          console.log(error);
+        }
+      }, 
+
 	  getVehicles: async () =>{
 		const store = getStore();
 		try {
@@ -55,7 +93,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 		} catch (error) {
 			console.log(error);
 		}
-	  }
+	  },
+
+	  getVehicle: async (id) => {
+        const store = getStore();
+        try {
+          const response = await fetch(`${store.apiURL}/vehicles/${id}`);
+          if (!response.ok) {
+            throw new Error("No se pudo obtener el vehículo");
+          }
+		  const data = await response.json();
+		  console.log(data);
+		  setStore({
+			vehicle: data,
+		  })
+        } catch (error) {
+          console.log(error);
+        }
+      }, 
     },
   };
 };

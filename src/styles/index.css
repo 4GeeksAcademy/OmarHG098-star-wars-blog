@@ -1,6 +1,23 @@
 /* 
     General Styles
 */
+body {
+    font-family: monospace;
+    font-size: 1em;
+    background-image: url("https://wallpapercave.com/wp/wp5959454.jpg");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    height: 100%;
+}
+nav {
+    font-family: monospace;
+    font-size: 1em;
+    background-image: url("https://th.bing.com/th/id/R.94331df1d1b025fd9c9211bbf9275bc4?rik=f26r02UcHuMexA&pid=ImgRaw&r=0");
+    background-position: center;
+    background-size: auto;
+    height: 10%;
+}
 .custom-card{
     min-width: 300px;
 }
@@ -9,5 +26,4 @@
     width: 95%;
     margin: 0 auto;
     overflow-x: scroll;
-
 }

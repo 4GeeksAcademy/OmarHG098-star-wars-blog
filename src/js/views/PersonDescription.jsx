@@ -13,8 +13,8 @@ const PersonDescription = () => {
 
   return (
     <div className="d-flex">
-    <div className="card col-3 mx-auto" >
-      <img className="card-img-top" style={{ height: "500px" }} src={"https://starwars-visualguide.com/assets/img/characters/" + (params.id) + ".jpg"} alt="Card image cap" />
+     <div className="card custom-card my-2 mx-auto bg-transparent text-warning border border-warning m-2" >
+      <img className="card-img-top"  src={"https://starwars-visualguide.com/assets/img/characters/" + (params.id) + ".jpg"} alt="Card image cap" />
       <div className="card-body">
         <h5 className="card-title">{store.person.name}</h5>
         <p className="card-text">
@@ -22,13 +22,13 @@ const PersonDescription = () => {
           bulk of the card's content.
         </p>
       </div>
-      <ul className="list-group list-group-flush">
-        <li className="list-group-item">Height: {store.person.height}</li>
-        <li className="list-group-item">Eye color: {store.person.eye_color}</li>
-        <li className="list-group-item">Mass: {store.person.mass}</li>
+      <ul>
+        <li>Height: {store.person.height}</li>
+        <li>Eye color: {store.person.eye_color}</li>
+        <li>Mass: {store.person.mass}</li>
       </ul>
       <div className="card-footer">
-      <button className="btn btn-danger"><i class="far fa-heart"></i>
+      <button className="btn btn-danger"><i className="far fa-heart"></i>
       </button>
       </div>
     </div>

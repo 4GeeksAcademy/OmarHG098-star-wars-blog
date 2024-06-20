@@ -4,6 +4,7 @@
 body {
     font-family: monospace;
     font-size: 1em;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     background-image: url("https://wallpapercave.com/wp/wp5959454.jpg");
     background-position: center;
     background-repeat: repeat;
@@ -11,13 +12,16 @@ body {
     height: 100%;
 }
 nav {
-    font-family: monospace;
+    /* font-family: monospace; */
     font-size: 1em;
     background-image: url("https://th.bing.com/th/id/R.94331df1d1b025fd9c9211bbf9275bc4?rik=f26r02UcHuMexA&pid=ImgRaw&r=0");
     background-position: center;
     background-size: auto;
     height: 10%;
 }
+ul {
+    list-style-type: none;
+  }
 .custom-card{
     min-width: 300px;
 }
@@ -27,3 +31,4 @@ nav {
     margin: 0 auto;
     overflow-x: scroll;
 }
+

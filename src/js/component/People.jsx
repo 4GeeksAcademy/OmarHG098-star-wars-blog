@@ -31,7 +31,7 @@ const People = () => {
                 >
                   Learn more
                 </Link>
-                <button className="btn btn-danger">
+                <button className="btn btn-danger" onClick={() => actions.addFavorite(person)}>
                   <i className="far fa-heart"></i>
                 </button>
               </div>

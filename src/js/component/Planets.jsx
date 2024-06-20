@@ -30,7 +30,7 @@ const Planets = () => {
                 >
                   Learn more
                 </Link>
-                <button className="btn btn-danger">
+                <button className="btn btn-danger" onClick={() => actions.addFavorite(planet)}>
                   <i className="far fa-heart"></i>
                 </button>
               </div>

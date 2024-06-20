@@ -9,7 +9,13 @@ const Vehicles = () => {
       {store.vehicles.map((vehicle, idx) => {
         return (
           <div className="card custom-card my-2 mx-auto bg-transparent text-warning border border-warning m-2" key={vehicle + idx}>
-            <img className="card-img-top" src="..." alt="Card image cap" />
+             <img
+              className="card-img-top"
+              src={`https://starwars-visualguide.com/assets/img/vehicles/${
+                vehicle.url.split("/")[5]
+              }.jpg`}
+              alt="Card image cap"
+            />
             <div className="card-body">
               <h5 className="card-title">{vehicle.name}</h5>
               <p className="card-text">
@@ -23,7 +29,7 @@ const Vehicles = () => {
                 >
                   Learn more
                 </Link>
-                <button className="btn btn-danger">
+                <button className="btn btn-danger" onClick={() => actions.addFavorite(vehicle)}>
                   <i className="far fa-heart"></i>
                 </button>
               </div>

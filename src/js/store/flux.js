@@ -7,7 +7,8 @@ const getState = ({ getStore, getActions, setStore }) => {
       planets: [],
 	  planet: {},
 	  vehicles: [],
-	  vehicle: {}, 
+	  vehicle: {},
+	  favorites: [], 
     },
     actions: {
       getPeople: async () => {
@@ -111,6 +112,17 @@ const getState = ({ getStore, getActions, setStore }) => {
           console.log(error);
         }
       }, 
+
+	  addFavorite: (item)=>{
+		const store = getStore();
+		if (store.favorites.includes(item)) {
+			let newArray = []
+			newArray = store.favorites.filter((element) => element != item)
+			setStore({ favorites: newArray })
+		} else {
+			setStore({ favorites: [...store.favorites, item] })
+		}
+	  },
     },
   };
 };

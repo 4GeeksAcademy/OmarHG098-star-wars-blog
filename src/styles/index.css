@@ -3,6 +3,7 @@
 */
 body {
     font-family: monospace;
+    font-weight: bold;
     font-size: 1em;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     background-image: url("https://wallpapercave.com/wp/wp5959454.jpg");

@@ -14,7 +14,7 @@ const Vehicles = () => {
               src={`https://starwars-visualguide.com/assets/img/vehicles/${
                 vehicle.url.split("/")[5]
               }.jpg`}
-              alt="Card image cap"
+              alt={`${vehicle.name} + '' + image cap `}
             />
             <div className="card-body">
               <h5 className="card-title">{vehicle.name}</h5>
@@ -24,7 +24,7 @@ const Vehicles = () => {
               </p>
               <div className="card-footer border-0 d-flex justify-content-between">
                 <Link
-                  to={`/vehicle-description/${idx + 1}`}
+                  to={`/vehicle-description/${vehicle.url.split("/")[5]}`}
                   className="btn btn-primary"
                 >
                   Learn more

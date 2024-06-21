@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 
 const People = () => {
   const { store, actions } = useContext(Context);
+  const item = store.person;
 
   return (
     <div className="d-flex element-containers gap-3 ">
@@ -31,7 +32,7 @@ const People = () => {
                 >
                   Learn more
                 </Link>
-                <button className="btn btn-danger" onClick={() => actions.addFavorite(person)}>
+                <button className="btn btn-danger favorite" onClick={() => actions.addFavorite(person.name)}>
                   <i className="far fa-heart"></i>
                 </button>
               </div>

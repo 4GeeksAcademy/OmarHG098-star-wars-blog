@@ -5,6 +5,8 @@ import { Context } from "../store/appContext";
 const PlanetDescription = (planet) => {
   const { store, actions } = useContext(Context);
   const params = useParams();
+  const item = store.planet.name;
+
   useEffect(() => {
     actions.getPlanet(params.id);
   }, []);
@@ -13,15 +15,21 @@ const PlanetDescription = (planet) => {
   return (
     <div className="d-flex">
       <div className="card custom-card my-2 mx-auto bg-transparent text-warning border border-warning m-2">
-        <img
+        {params.id == 1 ? (<img
+          className="card-img-top"
+          src={
+            "https://vignette.wikia.nocookie.net/starwars/images/7/7e/Tatooine_EotECR.png/revision/latest?cb=20170222030444"
+          }
+          alt={`${item} image cap`}
+        />) : (<img
           className="card-img-top"
           src={
             "https://starwars-visualguide.com/assets/img/planets/" +
             params.id +
             ".jpg"
           }
-          alt="Card image cap"
-        />
+          alt={`${item} image cap`}
+        />)}
         <div className="card-body ">
           <h5 className="card-title">{store.planet.name}</h5>
           <p className="card-text">
@@ -37,7 +45,7 @@ const PlanetDescription = (planet) => {
         <div className="card-footer">
           <button
             className="btn btn-danger"
-            onClick={() => actions.addFavorite(planet)}
+            onClick={() => actions.addFavorite(item)}
           >
             <i className="far fa-heart"></i>
           </button>

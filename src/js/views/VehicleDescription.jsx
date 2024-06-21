@@ -5,6 +5,8 @@ import { Context } from "../store/appContext";
 const VehicleDescription = (vehicle) => {
   const { store, actions } = useContext(Context);
   const params = useParams();
+  const item = store.vehicle.name;
+
   useEffect(() => {
     actions.getVehicle(params.id);
   }, []);
@@ -37,7 +39,7 @@ const VehicleDescription = (vehicle) => {
         <div className="card-footer">
           <button
             className="btn btn-danger"
-            onClick={() => actions.addFavorite(vehicle)}
+            onClick={() => actions.addFavorite(item)}
           >
             <i className="far fa-heart"></i>
           </button>

@@ -15,7 +15,11 @@ const Planets = () => {
               src={`https://starwars-visualguide.com/assets/img/planets/${
                 idx + 1
               }.jpg`}
-              alt="Card image cap"
+              alt={`${planet.name} image cap`}
+              onError={({ currentTarget }) => {
+                currentTarget.onerror = null; // prevents looping
+                currentTarget.src="https://vignette.wikia.nocookie.net/starwars/images/7/7e/Tatooine_EotECR.png/revision/latest?cb=20170222030444";
+              }}
             />
             <div className="card-body">
               <h5 className="card-title">{planet.name}</h5>
@@ -30,7 +34,7 @@ const Planets = () => {
                 >
                   Learn more
                 </Link>
-                <button className="btn btn-danger" onClick={() => actions.addFavorite(planet)}>
+                <button className="btn btn-danger" onClick={() => actions.addFavorite(planet.name)}>
                   <i className="far fa-heart"></i>
                 </button>
               </div>

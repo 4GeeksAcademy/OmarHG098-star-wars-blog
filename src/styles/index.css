@@ -1,7 +1,7 @@
 /* 
     General Styles
 */
-body {
+body, .footer {
     font-family: monospace;
     font-weight: bold;
     font-size: 1em;
@@ -20,6 +20,7 @@ nav {
     background-size: auto;
     height: 10%;
 }
+
 ul {
     list-style-type: none;
   }

@@ -22,14 +22,14 @@ export const Navbar = () => {
           >
             Favorites {store.favorites.length}
           </button>
-          <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <ul className="dropdown-menu bg-dark border border-warning container-fluid" aria-labelledby="dropdownMenuButton1">
 		  {store.favorites.map((favorite, id) => (
-            <li key={id}>
+            <li className="d-flex justify-content-between" key={id}>
               <a
-                className="dropdown-item"
+                className="dropdown-item bg-transparent text-warning"
                 onClick={() => actions.addFavorite(favorite)}
               >
-                {favorite.name} <i className="fa fa-trash float-end"></i>
+                {favorite} <i className="fa fa-trash float-end"></i>
               </a>
 			</li>))}
           </ul>

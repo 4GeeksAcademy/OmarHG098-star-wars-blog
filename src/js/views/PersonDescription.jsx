@@ -2,9 +2,10 @@ import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-const PersonDescription = (person) => {
+const PersonDescription = () => {
   const { store, actions } = useContext(Context);
   const params = useParams();
+  const item = store.person.name;
 
   useEffect(() => {
     actions.getPerson(params.id);
@@ -38,7 +39,7 @@ const PersonDescription = (person) => {
         <div className="card-footer">
           <button
             className="btn btn-danger"
-            onClick={() => actions.addFavorite(person)}
+            onClick={() => actions.addFavorite(item)}
           >
             <i className="far fa-heart"></i>
           </button>

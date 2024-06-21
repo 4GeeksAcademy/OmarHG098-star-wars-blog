@@ -122,6 +122,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		} else {
 			setStore({ favorites: [...store.favorites, item] })
 		}
+		console.log(store.favorites);
 	  },
     },
   };

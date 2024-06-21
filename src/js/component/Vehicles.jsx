@@ -29,7 +29,7 @@ const Vehicles = () => {
                 >
                   Learn more
                 </Link>
-                <button className="btn btn-danger" onClick={() => actions.addFavorite(vehicle)}>
+                <button className="btn btn-danger" onClick={() => actions.addFavorite(vehicle.name)}>
                   <i className="far fa-heart"></i>
                 </button>
               </div>

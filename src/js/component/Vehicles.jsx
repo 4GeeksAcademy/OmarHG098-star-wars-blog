@@ -19,8 +19,7 @@ const Vehicles = () => {
             <div className="card-body">
               <h5 className="card-title">{vehicle.name}</h5>
               <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+              From sleek starfighters and massive capital ships to rugged speeders and versatile droids, each tailored to fulfill specific roles in the ongoing conflicts and adventures across the galaxy.
               </p>
               <div className="card-footer border-0 d-flex justify-content-between">
                 <Link

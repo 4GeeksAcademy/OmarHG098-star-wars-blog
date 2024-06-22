@@ -11,7 +11,9 @@ export const Navbar = () => {
           <i className="fas fa-home"></i>
         </span>
       </Link>
-      
+      <span className="navbar-brand mb-0 text-warning">
+          This is a guide for:
+        </span>
         <div className="dropdown">
           <button
             className="btn btn-secondary dropdown-toggle bg-transparent text-warning"
@@ -23,8 +25,8 @@ export const Navbar = () => {
             Favorites {store.favorites.length}
           </button>
           <ul className="dropdown-menu bg-dark border border-warning container-fluid" aria-labelledby="dropdownMenuButton1">
-		  {store.favorites.map((favorite, id) => (
-            <li className="d-flex justify-content-between" key={id}>
+		  {store.favorites.map((favorite, idx) => (
+            <li className="d-flex justify-content-between" key={idx}>
               <a
                 className="dropdown-item bg-transparent text-warning"
                 onClick={() => actions.addFavorite(favorite)}

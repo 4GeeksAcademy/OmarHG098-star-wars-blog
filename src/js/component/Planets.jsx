@@ -24,8 +24,7 @@ const Planets = () => {
             <div className="card-body">
               <h5 className="card-title">{planet.name}</h5>
               <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+              From lush forests and barren deserts to bustling cityscapes and remote ice worlds, each with its own unique cultures, species, and histories woven into the fabric of the galaxy.
               </p>
               <div className="card-footer border-0 d-flex justify-content-between">
                 <Link

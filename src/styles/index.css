@@ -24,6 +24,11 @@ nav {
 ul {
     list-style-type: none;
   }
+
+.home-img{
+    width: 375px;
+    height: 175px; 
+}
 .custom-card{
     min-width: 300px;
 }

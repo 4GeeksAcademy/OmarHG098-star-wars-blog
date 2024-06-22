@@ -117,10 +117,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 		const store = getStore();
 		if (store.favorites.includes(item)) {
 			let newArray = []
-			newArray = store.favorites.filter((element) => element != item)
-			setStore({ favorites: newArray })
+			newArray = store.favorites.filter((element) => element != item);
+			setStore({ favorites: newArray });
 		} else {
-			setStore({ favorites: [...store.favorites, item] })
+			setStore({ favorites: [...store.favorites, item] });
 		}
 		console.log(store.favorites);
 	  },

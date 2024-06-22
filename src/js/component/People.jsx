@@ -22,8 +22,7 @@ const People = () => {
             <div className="card-body">
               <h5 className="card-title">{person.name}</h5>
               <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+              Star Wars characters are diverse in species, abilities, and personalities, each with intertwined motivations and destinies in an epic universe of distant galaxies.
               </p>
               <div className="card-footer border-0 d-flex justify-content-between">
                 <Link

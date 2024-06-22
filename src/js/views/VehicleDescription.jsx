@@ -27,12 +27,12 @@ const VehicleDescription = (vehicle) => {
         <div className="card-body ">
           <h5 className="card-title">{store.vehicle.name}</h5>
           <p className="card-text">
-            <strong>Population: </strong>
-            {store.vehicle.population}
+            <strong>Consumables: </strong>
+            {store.vehicle.consumables}
           </p>
         </div>
         <ul>
-          <li>Max. speed: {store.vehicle.max_atmospheric_speed}</li>
+          <li>Max. speed: {store.vehicle.max_atmosphering_speed}</li>
           <li>Cargo capacity: {store.vehicle.cargo_capacity}</li>
           <li>Manufacturer: {store.vehicle.manufacturer}</li>
         </ul>
